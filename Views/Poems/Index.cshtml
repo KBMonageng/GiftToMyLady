@@ -1,0 +1,20 @@
+﻿@model IEnumerable<GiftToMyLady.Models.Poem>
+
+@{
+    ViewBag.Title = "Poems";
+}
+
+<h2 class="mb-4">Poems</h2>
+
+@foreach (var poem in Model)
+{
+    <div class="card mb-3 shadow-sm">
+        <div class="card-body">
+            <h4>@poem.Title</h4>
+            <p class="text-muted">@poem.DatePublished.ToString("MMMM yyyy")</p>
+            <p>@poem.Content</p>
+
+            <a href="/Poems/Details/@poem.Id" class="btn btn-sm btn-outline-secondary">Read More</a>
+        </div>
+    </div>
+}

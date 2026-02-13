@@ -1,0 +1,234 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<!-- HERO SECTION -->
+<div class="hero" style="background-image: url('/Images/LandPageImage.jpg');">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1 class="display-3 fw-bold" style="color: var(--sunflower);">
+            Welcome, My Love
+        </h1>
+        <p class="lead" style="color: var(--off-white);">
+            A space made just for you, filled with warmth, memories, and poetry.
+        </p>
+    </div>
+</div>
+
+<!-- POEMS SECTION -->
+<section id="poems-section" class="poems-wrapper fade-section">
+
+    <div class="poems-image-bg"></div>
+    <div class="poems-overlay"></div>
+
+
+    <div class="container py-5">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-4">
+                <a href="/Poems/Cheesy" class="poem-tile"
+                   style="background-image: url('/Images/heart-bg.jpg');">
+                    <div class="poem-tile-overlay"></div>
+                    <h3 class="poem-tile-title">Heart</h3>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="/Poems/Romantic" class="poem-tile"
+                   style="background-image: url('/Images/mind-bg.jpg');">
+                    <div class="poem-tile-overlay"></div>
+                    <h3 class="poem-tile-title">Mind</h3>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="/Poems/Devilish" class="poem-tile"
+                   style="background-image: url('/Images/soul-bg.jpg');">
+                    <div class="poem-tile-overlay"></div>
+                    <h3 class="poem-tile-title">Soul</h3>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+    const sections = document.querySelectorAll('.fade-section');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+</script>
+
+<!-- ABOUT SECTION -->
+<section id="about-section" class="about-wrapper" >
+
+    <div class="about-image-bg"></div>
+    <div class="about-overlay"></div>
+
+    <div class="container py-5">
+   
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-4" style=" background-color: #000000">
+                <div class="about-tile" style="padding: 0; height: 232px; overflow: hidden; position: relative;">
+
+                    <iframe data-testid="embed-iframe"
+                            src="https://open.spotify.com/embed/track/1VzA9gORCjLO0MIy9xFzOO?utm_source=generator"
+                            width="100%"
+                            height="100%"
+                            frameBorder="0"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"
+                            style="border-radius: 0; position: absolute; inset: 0;">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="col-md-4" style=" background-color: #000000">
+                <div class="about-tile" style="padding: 0; height: 232px; overflow: hidden; position: relative;">
+
+                    <iframe data-testid="embed-iframe"
+                            src="https://open.spotify.com/embed/track/3ekAN7Ijl9vIemCaDbh29K?utm_source=generator"
+                            width="100%"
+                            height="100%"
+                            frameBorder="0"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"
+                            style="border-radius: 0; position: absolute; inset: 0;">
+                    </iframe>
+
+                </div>
+            </div>
+
+            <div class="col-md-4" style=" background-color: #000000">
+                <div class="about-tile" style="padding: 0; height: 232px; overflow: hidden; position: relative;">
+
+                    <iframe data-testid="embed-iframe"
+                            src="https://open.spotify.com/embed/track/5Oq6iKIWE3Q1i3G2fES5Oc?utm_source=generator"
+                            width="100%"
+                            height="100%"
+                            frameBorder="0"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"
+                            style="border-radius: 0; position: absolute; inset: 0;">
+                    </iframe>
+
+                </div>
+            </div>
+
+            <div class="col-md-4" style=" background-color: #000000">
+                <div class="about-tile" style="padding: 0; height: 232px; overflow: hidden; position: relative;">
+
+                    <iframe data-testid="embed-iframe"
+                            src="https://open.spotify.com/embed/track/2OEvLFIpRNKOrDqEmu5xWL?utm_source=generator"
+                            width="100%"
+                            height="100%"
+                            frameBorder="0"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"
+                            style="border-radius: 0; position: absolute; inset: 0;">
+                    </iframe>
+
+                </div>
+            </div>
+
+            <div class="col-md-4" style=" background-color: #000000">
+                <div class="about-tile" style="padding: 0; height: 232px; overflow: hidden; position: relative;">
+
+                    <iframe data-testid="embed-iframe"
+                            src="https://open.spotify.com/embed/track/2fE4MbwX3QGMzNaMjGVhtw?utm_source=generator"
+                            width="100%"
+                            height="100%"
+                            frameBorder="0"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"
+                            style="border-radius: 0; position: absolute; inset: 0;">
+                    </iframe>
+
+                </div>
+            </div>
+
+            <div class="col-md-4" style=" background-color: #000000">
+                <div class="about-tile" style="padding: 0; height: 232px; overflow: hidden; position: relative;">
+
+                    <iframe data-testid="embed-iframe"
+                            src="https://open.spotify.com/embed/track/6KS7UKpgsyqPPtDorXiabf?utm_source=generator"
+                            width="100%"
+                            height="100%"
+                            frameBorder="0"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"
+                            style="border-radius: 0; position: absolute; inset: 0;">
+                    </iframe>
+
+                </div>
+            </div>
+
+            <div class="col-md-4" style=" background-color: #000000">
+                <div class="about-tile" style="padding: 0; height: 232px; overflow: hidden; position: relative;">
+
+                    <iframe data-testid="embed-iframe"
+                            src="https://open.spotify.com/embed/track/34iP1qPyAfLpBAcMo7TQfN?utm_source=generator"
+                            width="100%"
+                            height="100%"
+                            frameBorder="0"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"
+                            style="border-radius: 0; position: absolute; inset: 0;">
+                    </iframe>
+
+                </div>
+            </div>
+
+            <div class="col-md-4" style=" background-color: #000000">
+                <div class="about-tile" style="padding: 0; height: 232px; overflow: hidden; position: relative;">
+
+                    <iframe data-testid="embed-iframe"
+                            src="https://open.spotify.com/embed/track/6ifI2e5LPPpmauukzQRQin?utm_source=generator"
+                            width="100%"
+                            height="100%"
+                            frameBorder="0"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"
+                            style="border-radius: 0; position: absolute; inset: 0;">
+                    </iframe>
+
+                </div>
+            </div>
+
+            <div class="col-md-4" style=" background-color: #000000">
+                <div class="about-tile" style="padding: 0; height: 232px; overflow: hidden; position: relative;">
+
+                    <iframe data-testid="embed-iframe"
+                            src="https://open.spotify.com/embed/track/7bRZSHUpTQFne0BbARBO8i?utm_source=generator"
+                            width="100%"
+                            height="100%"
+                            frameBorder="0"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"
+                            style="border-radius: 0; position: absolute; inset: 0;">
+                    </iframe>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</section>

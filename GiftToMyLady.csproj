@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\Videos\**" />
+    <Content Remove="wwwroot\Videos\**" />
+    <EmbeddedResource Remove="wwwroot\Videos\**" />
+    <None Remove="wwwroot\Videos\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\LandPageImage.jpg" />
+  </ItemGroup>
+
+</Project>

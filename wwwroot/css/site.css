@@ -1,0 +1,273 @@
+﻿:root {
+	--sunflower: #F2C94C;
+	--rose-red: #C0392B;
+	--rose-pink: #FADBD8;
+	--warm-brown: #8E5A2A;
+	--off-white: #FFF8F0;
+	--deep-black: #000000;
+}
+
+* {
+	border-radius: 30px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--deep-black);
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+/* NAVIGATION */
+.floating-nav {
+	position: absolute;
+	top: 20px;
+	width: 100%;
+	background: transparent;
+	z-index: 50;
+	display: flex;
+	justify-content: center;
+}
+
+.nav-link-custom {
+	color: var(--sunflower) !important;
+	font-weight: 500;
+	font-size: 1.1rem;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+	transition: color 0.3s ease, transform 0.3s ease;
+}
+
+	.nav-link-custom:hover {
+		color: var(--rose-red) !important;
+		transform: translateY(-2px);
+	}
+
+/* HERO */
+.hero {
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero-overlay {
+	background: rgba(0, 0, 0, 0.35);
+	position: absolute;
+	inset: 0;
+}
+
+.hero-content {
+	position: relative;
+	z-index: 2;
+	text-align: center;
+	color: white;
+	padding: 20px 40px;
+}
+
+	.hero-content h1 {
+		color: var(--sunflower) !important;
+	}
+
+	.hero-content p {
+		color: var(--warm-brown) !important;
+	}
+
+/* FADE ANIMATION */
+.fade-section {
+	opacity: 0;
+	transform: translateY(40px);
+	transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+	.fade-section.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+/* POEMS SECTION */
+.poems-wrapper {
+	position: relative;
+	min-height: 100vh;
+	padding-top: 80px;
+	overflow: hidden;
+	background: var(--deep-black);
+}
+
+.poems-image-bg {
+	position: absolute;
+	inset: 0;
+	background-image: url('/Images/poem-bg.jpg');
+	background-size: cover;
+	background-position: center;
+	z-index: 1;
+}
+
+.poems-overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0,0,0,0.45);
+	z-index: 2;
+	pointer-events: none;
+}
+
+.poems-wrapper .container {
+	position: relative;
+	z-index: 3;
+}
+
+#poems-section h2 {
+	color: var(--sunflower) !important;
+}
+
+/* POEM TILES */
+.poem-tile {
+	position: relative;
+	display: block;
+	height: 260px;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	text-decoration: none;
+	transition: transform 0.6s ease, box-shadow 0.6s ease;
+	box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+	.poem-tile:hover {
+		transform: translateY(-10px) scale(1.03);
+		box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+	}
+
+.poem-tile-overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0,0,0,0.45);
+	transition: background 0.3s ease;
+}
+
+.poem-tile:hover .poem-tile-overlay {
+	background: rgba(0,0,0,0.25);
+}
+
+.poem-tile-title {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	color: var(--sunflower) !important;
+	font-size: 1.8rem;
+	font-weight: 700;
+	text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+/* ABOUT SECTION */
+#about-section {
+	position: relative;
+	z-index: 10;
+}
+
+.about-wrapper {
+	position: relative;
+	min-height: 100vh;
+	padding-top: 80px;
+	overflow: visible;
+	background: none;
+}
+
+.about-image-bg {
+	position: absolute;
+	inset: 0;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+
+.about-overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0,0,0,0.45);
+	z-index: 2;
+	pointer-events: none;
+}
+
+.about-wrapper .container {
+	position: relative;
+	z-index: 3;
+}
+
+/* ABOUT TILES */
+.about-tile {
+	position: relative;
+	display: block;
+	height: 260px;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	text-decoration: none;
+	transition: transform 0.6s ease, box-shadow 0.6s ease;
+	box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+	border-radius: 18px;
+}
+
+	.about-tile:hover {
+		transform: translateY(-10px) scale(1.03);
+		box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+	}
+
+.about-tile-overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0,0,0,0.45);
+	transition: background 0.3s ease;
+}
+
+.about-tile:hover .about-tile-overlay {
+	background: rgba(0,0,0,0.25);
+}
+
+.about-tile-title {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	color: var(--sunflower);
+	font-size: 1.4rem;
+	font-weight: 700;
+	text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+/* ========================================= INDIVIDUAL POEM PAGES (Cheesy, Romantic, Devilish) ========================================= */ 
+.poem-page-wrapper {
+	position: relative;
+	min-height: 100vh;
+	padding-top: 80px;
+	background: #000000;
+	overflow: hidden;
+}
+
+.poem-page-bg {
+	position: absolute;
+	inset: 0;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+
+.poem-page-overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0,0,0,0.45);
+	z-index: 2;
+}
+
+.poem-page-content {
+	position: relative;
+	z-index: 3;
+	color: var(--off-white);
+}
